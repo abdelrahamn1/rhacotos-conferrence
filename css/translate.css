@@ -557,7 +557,7 @@ html {
 RESPONSIVE
 -------------------------------------------------------
 */
-@media (max-width: 420px) {
+@media (min-max: 150px) and (max-width: 420px) {
   body {
     overflow-x: hidden;
   }
@@ -670,7 +670,7 @@ RESPONSIVE
     padding: 0;
   }
   .objects-section .container .objects .ob {
-    max-width: 100%;
+    max-width: 80%;
     padding: 0;
     margin: 0;
   }
