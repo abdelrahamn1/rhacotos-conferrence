@@ -1,0 +1,285 @@
+:root {
+  --main-color: #0d143c;
+  --second-color: #31c4f3;
+  --fourth-color: #dafffb;
+  --white: #ffffff;
+  --p-color: #747474;
+  --font-family: "Cairo", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Cairo", sans-serif;
+}
+body::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url(/assests/three.jpg);
+  background-size: cover;
+  z-index: -1;
+  opacity: 0.5;
+}
+.formbold-main-wrapper h2 {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.formbold-main-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 0;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 700px;
+  padding-bottom: 80px;
+  border-radius: 20px;
+  background-color: white;
+}
+.formbold-form-wrapper {
+  margin: 0 auto;
+  width: 80%;
+  padding: 20px 0;
+}
+
+.formbold-steps {
+  padding-bottom: 18px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #dde3ec;
+}
+.formbold-steps ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  gap: 40px;
+}
+.formbold-steps li {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--main-color);
+}
+.formbold-steps li span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #dde3ec;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #536387;
+}
+.formbold-steps li.active {
+  color: var(--main-color);
+}
+.formbold-steps li.active span {
+  background: var(--second-color);
+  color: #ffffff;
+}
+
+.formbold-input-flex {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 22px;
+}
+.formbold-input-flex > div {
+  width: 50%;
+}
+.formbold-form-input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #dde3ec;
+  background: #ffffff;
+  font-weight: 500;
+  font-size: 16px;
+  color: #536387;
+  outline: none;
+  resize: none;
+  overflow: hidden;
+}
+.formbold-form-input:focus {
+  border-color: var(--second-color);
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+}
+.formbold-form-label {
+  color: var(--main-color);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  display: block;
+  margin-bottom: 10px;
+}
+.formbold-confirm-btn.active {
+  background: var(--main-color);
+  color: #ffffff;
+}
+
+.formbold-form-step-1,
+.formbold-form-step-2,
+.formbold-form-step-3,
+.formbold-form-step-4 {
+  display: none;
+}
+.formbold-form-step-1.active,
+.formbold-form-step-2.active,
+.formbold-form-step-3.active,
+.formbold-form-step-4.active {
+  display: block;
+}
+
+.formbold-form-btn-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 25px;
+  margin-top: 25px;
+}
+.formbold-back-btn {
+  cursor: pointer;
+  background: #ffffff;
+  border: none;
+  color: #07074d;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  display: none;
+}
+.formbold-back-btn.active {
+  display: block;
+}
+
+.formbold-btn {
+  align-items: center;
+  gap: 5px;
+  font-size: 16px;
+  border-radius: 5px;
+  padding: 10px 25px;
+  border: none;
+  font-weight: 500;
+  background-color: var(--main-color);
+  color: white;
+  cursor: pointer;
+  position: absolute;
+  top: 87%;
+}
+.sumbit-btn {
+  position: absolute;
+  right: 8%;
+  cursor: pointer;
+  top: 88%;
+  z-index: 1;
+  padding: 10px 30px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 500;
+  background-color: var(--main-color);
+  color: var(--white);
+  transition: 0.4s ease-in-out;
+  display: none;
+  border: none;
+}
+.sumbit-btn:hover {
+  background-color: var(--second-color);
+}
+.formbold-btn:hover {
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+}
+.formbold-form-step-2 select {
+  width: 100%;
+  height: 30px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  text-indent: 10px;
+  font-size: 15px;
+  cursor: pointer;
+}
+select:focus {
+  outline: 1px solid var(--second-color);
+  border: none;
+}
+.formbold-form-step-3 .gender input {
+  margin-left: 10px;
+}
+.formbold-form-btn-wrapper .formbold-btn {
+  margin-right: 50px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding-bottom: 10px;
+  transition: ease-in-out 0.4s;
+}
+.formbold-form-btn-wrapper .formbold-back-btn {
+  position: absolute;
+  top: 89%;
+  left: 20%;
+  font-size: 20px;
+}
+.formbold-form-btn-wrapper .formbold-btn:hover {
+  background-color: var(--second-color);
+}
+.user-form {
+  position: absolute;
+  left: 50%;
+  top: -10%;
+  z-index: 1;
+  transform: translate(-50%);
+}
+.user-form img {
+  width: 100px;
+}
+.formbold-form-step-1 .formbold-input-flex .formbold-form-input {
+  width: 120%;
+}
+.formbold-form-step-1 .upload-image {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  width: max-content;
+}
+.formbold-form-step-1 .upload-image label {
+  font-size: 17px;
+}
+.formbold-form-step-1 .upload-image input {
+  cursor: pointer;
+  border: 1px dashed var(--second-color);
+}
+.formbold-form-step-4 h4 {
+  font-weight: 400;
+  padding-left: 10px;
+  margin-top: 20px;
+}
+.formbold-form-step-4 select {
+  width: 50%;
+  height: 30px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  text-indent: 10px;
+  font-size: 15px;
+  cursor: pointer;
+}
+.formbold-form-step-4 .formbold-form-input {
+  width: 50%;
+}
+.formbold-form-step-4 .Acadmic,
+.faculty,
+.year-graduation {
+  display: none;
+}
+.Radio input {
+  margin-left: 5px;
+}
