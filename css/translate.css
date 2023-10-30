@@ -557,7 +557,7 @@ html {
 RESPONSIVE
 -------------------------------------------------------
 */
-@media (min-max: 150px) and (max-width: 420px) {
+@media (min-width: 150px) and (max-width: 420px) {
   body {
     overflow-x: hidden;
   }
