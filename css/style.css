@@ -191,9 +191,9 @@ HERO
 }
 /* Slideshow container */
 .hero .slideshow-container {
-  width: 100%;
+  max-width: 100%;
   position: relative;
-  margin: auto;
+  /* margin: auto; */
 }
 .hero .slideshow-container .mySlides img {
   height: 800px;
@@ -556,7 +556,7 @@ FOOTER
   color: var(--white);
   font-size: 20px;
   box-shadow: 5px 5px 50px var(--second-color);
-  right: -80px;
+  right: -100px;
   overflow: hidden;
   transition: right 0.5s ease-in-out;
   cursor: pointer;
@@ -565,7 +565,7 @@ FOOTER
 RESPONSIVE
 -------------------------------------------------------
 */
-@media (min-width: 220px) and (max-width: 420px) {
+@media (min-width: 150px) and (max-width: 420px) {
   body {
     overflow-x: hidden;
   }
@@ -575,6 +575,7 @@ RESPONSIVE
   }
   .navbar {
     border-radius: 0;
+    width: 100%;
   }
   .navbar #bar {
     display: block;
@@ -600,7 +601,7 @@ RESPONSIVE
     display: none;
   }
   .navbar .container .links {
-    max-width: 100%;
+    width: 100%;
   }
   .navbar .container .links ul {
     max-width: 100%;
@@ -612,7 +613,10 @@ RESPONSIVE
     transform: translateX(-30%);
   }
   .navbar .container .links ul li {
-    padding-bottom: 20px;
+    padding-bottom: 12px;
+  }
+  .navbar .container .links ul li a {
+    font-size: 20px;
   }
   .navbar .container .links ul .signin {
     transform: translateX(-4px);
@@ -672,7 +676,7 @@ RESPONSIVE
     padding: 0;
   }
   .objects-section .container .objects .ob {
-    max-width: 100%;
+    max-width: 80%;
     padding: 0;
     margin: 0;
   }
