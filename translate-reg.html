@@ -36,7 +36,7 @@
     </head>
 
     <body>
-        <div class="formbold-main-wrapper">
+        <div class="formbold-main-wrapper" >
             <div class="formbold-form-wrapper">
                 <form action="#" autocomplete="off" method="post">
                     <div class="formbold-steps">
@@ -104,7 +104,7 @@
                         <h2>Where are you From?</h2>
                         <div>
                             <label for="national" class="formbold-form-label"> Nationality </label>
-                            <select name="nationality" id="national" required>
+                            <select name="nationality" required id="national" >
                                 <option value="0" label="Select a country ... " selected="selected" disabled="disabled">
                                     Select a country ... </option>
                                 <option value="Afghanistan">Afghanistan</option>
@@ -363,7 +363,7 @@
                         </div>
                         <div>
                             <label for="Country of Residence" class="formbold-form-label"> Country of Residence </label>
-                            <select name="Country of Residence" id="Country of Residence" required>
+                            <select name="Country of Residence" required id="Country of Residence" >
                                 <option value="0" label="Select a country ... " selected="selected" disabled="disabled">
                                     Select a country ... </option>
                                 <option value="Afghanistan">Afghanistan</option>
@@ -623,11 +623,11 @@
                         <div class="formbold-input-flex">
                             <div>
                                 <label for="City" class="formbold-form-label"> City </label>
-                                <input type="text" name="City" id="City" class="formbold-form-input" required />
+                                <input type="text" required name="City" id="City" class="formbold-form-input"  />
                             </div>
                             <div>
                                 <label for="Adress" class="formbold-form-label"> Adress</label>
-                                <input type="text" name="Adress" id="Adress" class="formbold-form-input" required />
+                                <input type="text" required name="Adress" id="Adress" class="formbold-form-input"  />
                             </div>
                         </div>
                     </div>
@@ -638,21 +638,21 @@
                         <h2>More About you?</h2>
                         <div class="formbold-input-flex">
                             <div>
-                                <input type="text" name="id" id="id" class="formbold-form-input"
-                                    placeholder="National-ID" onkeypress="return isNumberKey(event)" required />
+                                <input type="text" required name="id" id="id" class="formbold-form-input"
+                                    placeholder="National-ID" onkeypress="return isNumberKey(event)"  />
                             </div>
                             <div>
-                                <input type="text" name="phone" id="phone" class="formbold-form-input"
-                                    placeholder="Phone Number" onkeypress="return isNumberKey(event)" required />
+                                <input type="text" required name="phone" id="phone" class="formbold-form-input"
+                                    placeholder="Phone Number" onkeypress="return isNumberKey(event)"  />
                             </div>
                         </div>
                         <div class="formbold-input-flex">
                             <div>
-                                <input type="text" name="email" id="emil" class="formbold-form-input"
-                                    placeholder="E-mail" required />
+                                <input type="text" required name="email" id="emil" class="formbold-form-input"
+                                    placeholder="E-mail"  />
                             </div>
                             <div>
-                                <input type="date" name="date" id="date" class="formbold-form-input" />
+                                <input type="date" required name="date" id="date" class="formbold-form-input" />
                             </div>
                         </div>
                     </div>
@@ -664,16 +664,16 @@
                         <h4>Are you graduated?</h4>
                         <div class="formbold-input-flex">
                             <div class="Radio">
-                                <input type="radio" name="answer-qual" id="yes-qual" required />
+                                <input type="radio" required name="answer-qual" id="yes-qual"  />
                                 <label for="yes-qual">Yes</label>
-                                <input type="radio" name="answer-qual" id="no-qual" />
+                                <input type="radio" required name="answer-qual" id="no-qual" />
                                 <label for="no-qual">No</label>
                             </div>
                             <label for=""></label>
                         </div>
                         <div class="Acadmic">
                             <h4>Highest Acadimic Qualifiction ?</h4>
-                            <select name="education" id="educaation" required>
+                            <select name="education" required id="educaation" >
                                 <option value="0" selected="selected" disabled="disabled">-- select one --</option>
                                 <option value="No formal education">No formal education</option>
                                 <option value="Primary education">Primary education</option>
@@ -686,15 +686,14 @@
                         </div>
                         <div class="faculty">
                             <h4>Faculty or School?</h4>
-                            <input type="text" name="faculty" id="faculty" class="formbold-form-input" required />
+                            <input type="text" required name="faculty" id="faculty" class="formbold-form-input"  />
                         </div>
                         <div class="year-graduation">
                             <h4>Graduation year?</h4>
-                            <input type="text" name="graduation" id="graduation" class="formbold-form-input"
-                                onkeypress="return isNumberKey(event)" required />
+                            <input type="text" required name="graduation" id="graduation" class="formbold-form-input"
+                                onkeypress="return isNumberKey(event)"  />
                         </div>
                     </div>
-                    <!-- <input type="submit" value="Sumbit" class="sumbit-btn"> -->
                 </form>
             </div>
             <div class="formbold-form-btn-wrapper">
