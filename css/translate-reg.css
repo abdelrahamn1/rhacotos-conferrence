@@ -283,3 +283,244 @@ select:focus {
 .Radio input {
   margin-left: 5px;
 }
+
+/* ---------------------------------- */
+/* Responsive */
+/* ---------------------------------- */
+@media (min-width: 150px) and (max-width: 420px) {
+  body {
+    overflow-x: hidden;
+  }
+  /* body::after {
+    display: none;
+  } */
+
+  .formbold-form-step-1 h2 {
+    padding-top: 20px;
+    margin-bottom: 15px;
+  }
+  .formbold-steps {
+    display: none;
+  }
+  .formbold-steps ul {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    display: none;
+  }
+
+  .formbold-form-step-1,
+  .formbold-form-step-2,
+  .formbold-form-step-3,
+  .formbold-form-step-4 {
+    padding-bottom: 20px;
+    height: 100%;
+  }
+  .formbold-input-flex {
+    display: flex;
+    flex-direction: column;
+    padding-left: 100px;
+  }
+  .formbold-form-step-1 .formbold-form-input {
+    transform: translateX(-80px);
+  }
+  .formbold-form-step-1 .upload-image {
+    padding-left: 100px;
+    padding-right: 50px;
+    padding-bottom: 15px;
+  }
+  .formbold-form-step-1 .upload-image input {
+    width: 80%;
+  }
+  .formbold-form-step-1 .Radio {
+    padding-left: 110px;
+  }
+  .formbold-form-btn-wrapper {
+    position: absolute;
+    top: 102%;
+    left: 70%;
+    transform: translate(-100%, -80%);
+    padding: 0;
+    margin: 0;
+  }
+  .formbold-form-btn-wrapper .formbold-btn {
+    padding: 0;
+    margin: 0;
+    width: 140px;
+    height: 40px;
+  }
+  .formbold-main-wrapper {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  .formbold-main-wrapper .formbold-form-wrapper {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  .formbold-form-step-2 h2 {
+    padding-top: 40px;
+  }
+  .formbold-form-step-2 select {
+    width: 80%;
+    transform: translateX(20px);
+  }
+  .formbold-form-step-2 .formbold-form-label {
+    padding-left: 20px;
+  }
+  .formbold-form-step-2 .formbold-input-flex .formbold-form-input,
+  .formbold-input-flex .formbold-form-label {
+    transform: translateX(-80px);
+    width: max-content;
+  }
+  .formbold-form-input {
+    padding: 0;
+    margin: 0;
+    width: max-content;
+    height: 40px;
+  }
+  .formbold-form-btn-wrapper .formbold-back-btn {
+    transform: translate(-140px, 70px);
+    padding: 0;
+    margin: 0;
+    width: 140px;
+    height: 40px;
+    border-radius: 10px;
+  }
+  .formbold-form-step-3 h2 {
+    padding-top: 55px;
+  }
+  .formbold-form-step-3 .formbold-form-input {
+    transform: translateX(-80px);
+  }
+  .formbold-form-step-4 h2 {
+    padding-top: 70px;
+  }
+  .formbold-form-step-4 select {
+    transform: translateX(10px);
+  }
+  .formbold-form-step-4 .formbold-form-input {
+    margin-left: 10px;
+  }
+}
+/* ------------------------------------------ */
+/* 791px */
+/* ------------------------------------------ */
+@media (min-width: 421px) and (max-width: 791px) {
+  body {
+    overflow-x: hidden;
+  }
+  /* body::after {
+    display: none;
+  } */
+
+  .formbold-form-step-1 h2 {
+    padding-top: 20px;
+    margin-bottom: 15px;
+  }
+  .formbold-steps {
+    display: none;
+  }
+  .formbold-steps ul {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    display: none;
+  }
+
+  .formbold-form-step-1,
+  .formbold-form-step-2,
+  .formbold-form-step-3,
+  .formbold-form-step-4 {
+    padding-bottom: 20px;
+    height: 100%;
+  }
+  .formbold-input-flex {
+    display: flex;
+    flex-direction: column;
+    padding-left: 100px;
+  }
+  .formbold-form-step-1 .formbold-form-input {
+    transform: translateX(-80px);
+  }
+  .formbold-form-step-1 .upload-image {
+    padding-left: 100px;
+    padding-right: 50px;
+    padding-bottom: 15px;
+  }
+  .formbold-form-step-1 .upload-image input {
+    width: 80%;
+  }
+  .formbold-form-step-1 .Radio {
+    padding-left: 110px;
+  }
+  .formbold-form-btn-wrapper {
+    position: absolute;
+    top: 102%;
+    left: 70%;
+    transform: translate(-100%, -80%);
+    padding: 0;
+    margin: 0;
+  }
+  .formbold-form-btn-wrapper .formbold-btn {
+    padding: 0;
+    margin: 0;
+    width: 140px;
+    height: 40px;
+  }
+  .formbold-main-wrapper {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  .formbold-main-wrapper .formbold-form-wrapper {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  .formbold-form-step-2 h2 {
+    padding-top: 40px;
+  }
+  .formbold-form-step-2 select {
+    width: 80%;
+    transform: translateX(20px);
+  }
+  .formbold-form-step-2 .formbold-form-label {
+    padding-left: 20px;
+  }
+  .formbold-form-step-2 .formbold-input-flex .formbold-form-input,
+  .formbold-input-flex .formbold-form-label {
+    transform: translateX(-80px);
+    width: max-content;
+  }
+  .formbold-form-input {
+    padding: 0;
+    margin: 0;
+    width: max-content;
+    height: 40px;
+  }
+  .formbold-form-btn-wrapper .formbold-back-btn {
+    transform: translate(-140px, 70px);
+    padding: 0;
+    margin: 0;
+    width: 140px;
+    height: 40px;
+    border-radius: 10px;
+  }
+  .formbold-form-step-3 h2 {
+    padding-top: 55px;
+  }
+  .formbold-form-step-3 .formbold-form-input {
+    transform: translateX(-80px);
+  }
+  .formbold-form-step-4 h2 {
+    padding-top: 70px;
+  }
+  .formbold-form-step-4 select {
+    transform: translateX(10px);
+  }
+  .formbold-form-step-4 .formbold-form-input {
+    margin-left: 10px;
+  }
+}
