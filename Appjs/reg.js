@@ -3,11 +3,13 @@ const stepMenuOne = document.querySelector(".formbold-step-menu1");
 const stepMenuTwo = document.querySelector(".formbold-step-menu2");
 const stepMenuThree = document.querySelector(".formbold-step-menu3");
 const stepMenuFour = document.querySelector(".formbold-step-menu4");
+const stepMenuFive = document.querySelector(".formbold-step-menu5");
 // Form Steps
 const stepOne = document.querySelector(".formbold-form-step-1");
 const stepTwo = document.querySelector(".formbold-form-step-2");
 const stepThree = document.querySelector(".formbold-form-step-3");
 const stepFour = document.querySelector(".formbold-form-step-4");
+const stepFive = document.querySelector(".formbold-form-step-5");
 // Form buttons
 const formSubmitBtn = document.querySelector(".formbold-btn");
 const formBackBtn = document.querySelector(".formbold-back-btn");
@@ -82,7 +84,6 @@ formSubmitBtn.addEventListener("click", function (event) {
       stepMenuFour.classList.add("active");
       stepThree.classList.remove("active");
       stepFour.classList.add("active");
-      formSubmitBtn.textContent = "Submit";
       //back to stage 3
       formBackBtn.classList.add("active");
     } else {
@@ -95,19 +96,39 @@ formSubmitBtn.addEventListener("click", function (event) {
         input[13].value.trim() !== "" &&
         selectinput[2].value != 0
       ) {
-        document.querySelector("form").submit();
+        stepMenuFour.classList.remove("active");
+        stepMenuFive.classList.add("active");
+        stepFour.classList.remove("active");
+        stepFive.classList.add("active");
+        formSubmitBtn.textContent = "Submit";
+        //back to stage 4
+        formBackBtn.classList.add("active");
       } else {
         openModal();
       }
     } else if (NoAnswer.checked) {
       if (input[11].value.trim() !== "" && input[12].value.trim() !== "") {
-        document.querySelector("form").submit();
+        stepMenuFour.classList.remove("active");
+        stepMenuFive.classList.add("active");
+        stepFour.classList.remove("active");
+        stepFive.classList.add("active");
+        formSubmitBtn.textContent = "Submit";
+        //back to stage 4
+        formBackBtn.classList.add("active");
       } else {
         openModal();
       }
     }
+  } else if (stepMenuFive.className == "formbold-step-menu5 active") {
+    if (input[14].value.trim() !== "") {
+      document.querySelector("form").submit();
+    } else {
+      openModal();
+    }
   }
 });
+
+// document.querySelector("form").submit();
 // -----------------------------Form Back Button-------------------------------------//
 formBackBtn.onclick = function (e) {
   e.preventDefault();
@@ -129,6 +150,12 @@ formBackBtn.onclick = function (e) {
     stepMenuFour.classList.remove("active");
     stepThree.classList.add("active");
     stepFour.classList.remove("active");
+    formSubmitBtn.textContent = "Next Step";
+  } else if (stepMenuFive.className == "formbold-step-menu5 active") {
+    stepMenuFour.classList.add("active");
+    stepMenuFive.classList.remove("active");
+    stepFour.classList.add("active");
+    stepFive.classList.remove("active");
     formSubmitBtn.textContent = "Next Step";
   }
 };
