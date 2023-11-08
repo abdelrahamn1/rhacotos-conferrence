@@ -145,12 +145,18 @@ body::after {
 .formbold-form-step-5.active {
   display: block;
 }
+.formbold-form-step-4.active {
+  padding-bottom: 20px;
+}
 .formbold-form-step-5.active {
   padding-bottom: 80px;
 }
 .formbold-form-step-5.active label {
   font-size: 20px;
   text-align: center;
+}
+.year-study input::placeholder {
+  font-size: 12px;
 }
 .formbold-form-btn-wrapper {
   display: flex;
@@ -284,11 +290,10 @@ select:focus {
 .formbold-form-step-4 .formbold-form-input {
   width: 50%;
 }
-.formbold-form-step-4 .Acadmic,
-.faculty,
+.formbold-form-step-4 .faculty,
+.university,
 .year-graduation,
-.year-study,
-.university {
+.year-study {
   display: none;
 }
 .Radio input {
