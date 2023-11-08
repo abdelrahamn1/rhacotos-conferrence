@@ -26,7 +26,8 @@ const faculty = document.querySelector(".faculty");
 const GraduationYear = document.querySelector(".year-graduation");
 const YearStudy = document.querySelector(".year-study");
 const university = document.querySelector(".university");
-console.log(input);
+const yearOFHighest = document.querySelector(".year-of-highest");
+const H4faculty = document.querySelector(".faculty h4");
 //---------------------------INPUT FILED ACCEPT ONLY NUMBER-------------------------------- //
 function isNumberKey(event) {
   var charCode = event.which ? event.which : event.keyCode;
@@ -94,7 +95,9 @@ formSubmitBtn.addEventListener("click", function (event) {
   } else if (stepMenuFour.className == "formbold-step-menu4 active") {
     if (YesAnswer.checked) {
       if (
+        input[11].value.trim() !== "" &&
         input[12].value.trim() !== "" &&
+        input[13].value.trim() !== "" &&
         input[14].value.trim() !== "" &&
         selectinput[2].value != 0
       ) {
@@ -112,7 +115,10 @@ formSubmitBtn.addEventListener("click", function (event) {
       if (
         input[11].value.trim() !== "" &&
         input[12].value.trim() !== "" &&
-        input[13].value.trim() !== ""
+        input[13].value.trim() !== "" &&
+        input[14].value.trim() !== "" &&
+        input[15].value.trim() !== "" &&
+        selectinput[2].value != 0
       ) {
         stepMenuFour.classList.remove("active");
         stepMenuFive.classList.add("active");
@@ -126,7 +132,7 @@ formSubmitBtn.addEventListener("click", function (event) {
       }
     }
   } else if (stepMenuFive.className == "formbold-step-menu5 active") {
-    if (input[15].value.trim() !== "") {
+    if (input[16].value.trim() !== "") {
       document.querySelector("form").submit();
     } else {
       openModal();
@@ -167,18 +173,17 @@ formBackBtn.onclick = function (e) {
 };
 // -------------------------Acadmic--------------------------------------------------//
 YesAnswer.onclick = function () {
-  Acadmic.style.display = "block";
-  GraduationYear.style.display = "block";
-  university.style.display = "block";
-  faculty.style.display = "none";
-  YearStudy.style.display = "none";
-};
-NoAnswer.onclick = function () {
-  Acadmic.style.display = "none";
-  GraduationYear.style.display = "none";
-  YearStudy.style.display = "block";
   faculty.style.display = "block";
   university.style.display = "block";
+  YearStudy.style.display = "block";
+  GraduationYear.style.display = "none";
+};
+NoAnswer.onclick = function () {
+  H4faculty.innerHTML = "At which faculty/institute are you studied";
+  faculty.style.display = "block";
+  university.style.display = "block";
+  YearStudy.style.display = "block";
+  GraduationYear.style.display = "block";
 };
 // ---------------------------------------Modal---------------------------------------//
 
