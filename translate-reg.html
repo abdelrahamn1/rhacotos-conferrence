@@ -657,16 +657,6 @@
                             <img src="/assests/user.png" alt="">
                         </div>
                         <h2>Academic Qualifiction!</h2>
-                        <h4>Are you currently studying?</h4>
-                        <div class="formbold-input-flex">
-                            <div class="Radio">
-                                <input type="radio" required name="answer-qual" id="yes-qual"  />
-                                <label for="yes-qual">Yes</label>
-                                <input type="radio" required name="answer-qual" id="no-qual" />
-                                <label for="no-qual">No</label>
-                            </div>
-                            <label for=""></label>
-                        </div>
                         <div class="Acadmic">
                             <h4>Highest Acadimic Qualifiction ?</h4>
                             <select name="education" required id="educaation" >
@@ -680,24 +670,37 @@
                                 <option value="Doctorate or higher">Doctorate</option>
                             </select>
                         </div>
-                        <div class="faculty">
-                            <h4>At which faculty/institute are you currently studying?</h4>
-                            <input type="text" required name="faculty" id="faculty" class="formbold-form-input"  />
+                        <div class="year-of-highest">
+                            <label>Year of obtaining the academic qualification?</label>
+                            <input type="text" required name="year-of-highest" id="year-of-highest" class="formbold-form-input" onkeypress="return isNumberKey(event)"  />
                         </div>
-                        <div class="university">
-                            <h4>University?</h4>
-                            <input type="text" required name="University" id="University" class="formbold-form-input"  />
+                        <h4>Are you currently studying?</h4>
+                        <div class="formbold-input-flex">
+                            <div class="Radio">
+                                <input type="radio" required name="answer-qual" id="yes-qual"  />
+                                <label for="yes-qual">Yes</label>
+                                <input type="radio" required name="answer-qual" id="no-qual" />
+                                <label for="no-qual">No</label>
+                            </div>
                         </div>
-                        <div class="year-study">
-                            <h4>Level?</h4>
-                            <input type="text" required name="level" id="level" class="formbold-form-input"
-                                onkeypress="return isNumberKey(event)"  />
-                        </div>
-                        <div class="year-graduation">
-                            <h4>Graduation year?</h4>
-                            <input type="text" required name="graduation" id="graduation" class="formbold-form-input"
-                                onkeypress="return isNumberKey(event)"  />
-                        </div>
+                            <div class="faculty">
+                                <h4>At which faculty/institute are you currently studying?</h4>
+                                <input type="text" required name="faculty" id="faculty" class="formbold-form-input"  />
+                            </div>
+                            <div class="year-study">
+                                <h4>Level?</h4>
+                                <input type="text" required name="level" id="level" class="formbold-form-input"
+                                    onkeypress="return isNumberKey(event)" placeholder="if you graduated or prepare MSc/PHD type 'none'" />
+                            </div>
+                            <div class="university">
+                                    <h4>University / School?</h4>
+                                    <input type="text" required name="University" id="University" class="formbold-form-input"  />
+                            </div>
+                            <div class="year-graduation">
+                                    <h4>Graduation year?</h4>
+                                    <input type="text" required name="graduation" id="graduation" class="formbold-form-input"
+                                        onkeypress="return isNumberKey(event)"  />
+                            </div>
                     </div>
                     <div class="formbold-form-step-5">
                         <label for="activate-email" class="formbold-form-label"> Activation Email </label>
