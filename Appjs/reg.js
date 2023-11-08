@@ -25,6 +25,8 @@ const Acadmic = document.querySelector(".Acadmic");
 const faculty = document.querySelector(".faculty");
 const GraduationYear = document.querySelector(".year-graduation");
 const YearStudy = document.querySelector(".year-study");
+const university = document.querySelector(".university");
+console.log(input);
 //---------------------------INPUT FILED ACCEPT ONLY NUMBER-------------------------------- //
 function isNumberKey(event) {
   var charCode = event.which ? event.which : event.keyCode;
@@ -92,8 +94,8 @@ formSubmitBtn.addEventListener("click", function (event) {
   } else if (stepMenuFour.className == "formbold-step-menu4 active") {
     if (YesAnswer.checked) {
       if (
-        input[11].value.trim() !== "" &&
-        input[13].value.trim() !== "" &&
+        input[12].value.trim() !== "" &&
+        input[14].value.trim() !== "" &&
         selectinput[2].value != 0
       ) {
         stepMenuFour.classList.remove("active");
@@ -107,7 +109,11 @@ formSubmitBtn.addEventListener("click", function (event) {
         openModal();
       }
     } else if (NoAnswer.checked) {
-      if (input[11].value.trim() !== "" && input[12].value.trim() !== "") {
+      if (
+        input[11].value.trim() !== "" &&
+        input[12].value.trim() !== "" &&
+        input[13].value.trim() !== ""
+      ) {
         stepMenuFour.classList.remove("active");
         stepMenuFive.classList.add("active");
         stepFour.classList.remove("active");
@@ -120,7 +126,7 @@ formSubmitBtn.addEventListener("click", function (event) {
       }
     }
   } else if (stepMenuFive.className == "formbold-step-menu5 active") {
-    if (input[14].value.trim() !== "") {
+    if (input[15].value.trim() !== "") {
       document.querySelector("form").submit();
     } else {
       openModal();
@@ -163,14 +169,16 @@ formBackBtn.onclick = function (e) {
 YesAnswer.onclick = function () {
   Acadmic.style.display = "block";
   GraduationYear.style.display = "block";
-  faculty.style.display = "block";
+  university.style.display = "block";
+  faculty.style.display = "none";
   YearStudy.style.display = "none";
 };
 NoAnswer.onclick = function () {
-  YearStudy.style.display = "block";
   Acadmic.style.display = "none";
   GraduationYear.style.display = "none";
+  YearStudy.style.display = "block";
   faculty.style.display = "block";
+  university.style.display = "block";
 };
 // ---------------------------------------Modal---------------------------------------//
 
