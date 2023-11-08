@@ -287,7 +287,8 @@ select:focus {
 .formbold-form-step-4 .Acadmic,
 .faculty,
 .year-graduation,
-.year-study {
+.year-study,
+.university {
   display: none;
 }
 .Radio input {
