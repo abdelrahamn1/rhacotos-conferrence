@@ -44,6 +44,7 @@ body::after {
   padding-bottom: 80px;
   border-radius: 20px;
   background-color: white;
+  margin-top: 20px;
 }
 .formbold-form-wrapper {
   margin: 0 auto;
@@ -148,6 +149,9 @@ body::after {
 .formbold-form-step-4.active {
   padding-bottom: 20px;
 }
+.company-name {
+  display: none;
+}
 .formbold-form-step-5.active {
   padding-bottom: 80px;
 }
@@ -155,8 +159,21 @@ body::after {
   font-size: 20px;
   text-align: center;
 }
-.year-study input::placeholder {
-  font-size: 12px;
+.formbold-form-step-4.active .formbold-input-flex select {
+  width: 240px;
+}
+.formbold-form-step-4.active .formbold-form-input {
+  padding: 0;
+  margin: 0;
+  height: 30px;
+  width: 250px;
+  text-indent: 5px;
+}
+.formbold-form-step-4.active .formbold-input-flex .Radio-work {
+  transform: translate(10px);
+}
+.formbold-form-step-4.active .year-study input::placeholder {
+  font-size: 10px;
 }
 .formbold-form-btn-wrapper {
   display: flex;
@@ -346,13 +363,14 @@ select:focus {
   body {
     overflow-x: hidden;
   }
-  /* body::after {
-    display: none;
-  } */
 
   .formbold-form-step-1 h2 {
     padding-top: 20px;
     margin-bottom: 15px;
+    font-size: 14px;
+  }
+  .user-form {
+    display: none;
   }
   .formbold-steps {
     display: none;
@@ -456,9 +474,6 @@ select:focus {
   .formbold-form-step-4 select {
     transform: translateX(10px);
   }
-  .formbold-form-step-4 .formbold-form-input {
-    margin-left: 10px;
-  }
 }
 /* ------------------------------------------ */
 /* 791px */
@@ -468,7 +483,7 @@ select:focus {
     overflow-x: hidden;
   }
   /* body::after {
-    display: none;
+    background: white;
   } */
 
   .formbold-form-step-1 h2 {
