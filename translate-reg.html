@@ -63,7 +63,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="formbold-form-step-1 active" aria-required="true">
+                    <div class="formbold-form-step-1  active" aria-required="true">
                         <div class="user-form">
                             <img src="/assests/user.png" alt="">
                         </div>
@@ -88,6 +88,11 @@
                                 <label for="lastname" class="formbold-form-label"> Last name </label>
                                 <input type="text" name="lastname" id="lastname" class="formbold-form-input" required />
                             </div>
+                        </div>
+                        <div>
+                            <label for="arabic-name" class="formbold-form-label"> Arabic Name </label>
+                            <input type="text" name="arabic-name" id="arabic-name" class="formbold-form-input"
+                                required />
                         </div>
                         <div class="upload-image">
                             <label for="personal-img" class="formbold-form-label">Upload-Image</label>
@@ -652,27 +657,44 @@
                             </div>
                         </div>
                     </div>
-                    <div class="formbold-form-step-4">
+                    <div class="formbold-form-step-4 ">
                         <div class="user-form">
                             <img src="/assests/user.png" alt="">
                         </div>
                         <h2>Academic Qualifiction!</h2>
-                        <div class="Acadmic">
-                            <h4>Highest Acadimic Qualifiction ?</h4>
-                            <select name="education" required id="educaation" >
-                                <option value="0" selected="selected" disabled="disabled">-- select one --</option>
-                                <option value="No formal education">No formal education</option>
-                                <option value="Primary education">Primary education</option>
-                                <option value="High education">High school</option>
-                                <option value="Vocational qualification">Vocational qualification</option>
-                                <option value="Bachelor's degree">Bachelor's degree</option>
-                                <option value="Master's degree">Master's degree</option>
-                                <option value="Doctorate or higher">Doctorate</option>
-                            </select>
+                        <div class="formbold-input-flex"> 
+                            <div class="work">
+                                <h4>Are currently working?</h4>                      
+                                <div class="Radio-work">
+                                    <input type="radio" required name="work-answer" id="yes-qual-work"  />
+                                    <label for="yes-qual-work">Yes</label>
+                                    <input type="radio" required name="work-answer" id="no-qual-work" />
+                                    <label for="no-qual-work">No</label>
+                                </div>
+                            </div>
+                            <div class="company-name">
+                                <h4 for="work-palce">Company Name?</h4>
+                            <input type="text" required name="work-place" id="work-place" class="formbold-form-input"   />
+                            </div>
                         </div>
-                        <div class="year-of-highest">
-                            <label>Year of obtaining the academic qualification?</label>
-                            <input type="text" required name="year-of-highest" id="year-of-highest" class="formbold-form-input" onkeypress="return isNumberKey(event)"  />
+                        <div class="formbold-input-flex">
+                            <div class="Acadmic">
+                                <h4>Highest Acadimic Qualifiction ?</h4>
+                                <select name="education" required id="educaation" >
+                                    <option value="0" selected="selected" disabled="disabled">-- select one --</option>
+                                    <option value="No formal education">No formal education</option>
+                                    <option value="Primary education">Primary education</option>
+                                    <option value="High education">High school</option>
+                                    <option value="Vocational qualification">Vocational qualification</option>
+                                    <option value="Bachelor's degree">Bachelor's degree</option>
+                                    <option value="Master's degree">Master's degree</option>
+                                    <option value="Doctorate or higher">Doctorate</option>
+                                </select>
+                            </div>
+                            <div class="year-of-highest">
+                                <h4>Year of obtaining it?</h4>
+                                <input type="text" required name="year-of-highest" id="year-of-highest" class="formbold-form-input" onkeypress="return isNumberKey(event)"  />
+                            </div>
                         </div>
                         <h4>Are you currently studying?</h4>
                         <div class="formbold-input-flex">
@@ -683,10 +705,7 @@
                                 <label for="no-qual">No</label>
                             </div>
                         </div>
-                            <div class="faculty">
-                                <h4>At which faculty/institute are you currently studying?</h4>
-                                <input type="text" required name="faculty" id="faculty" class="formbold-form-input"  />
-                            </div>
+                        <div class="formbold-input-flex">
                             <div class="year-study">
                                 <h4>Level?</h4>
                                 <input type="text" required name="level" id="level" class="formbold-form-input"
@@ -695,6 +714,11 @@
                             <div class="university">
                                     <h4>University / School?</h4>
                                     <input type="text" required name="University" id="University" class="formbold-form-input"  />
+                            </div>
+                        </div>
+                            <div class="faculty">
+                                <h4>At which faculty/institute are you currently studying?</h4>
+                                <input type="text" required name="faculty" id="faculty" class="formbold-form-input"  />
                             </div>
                             <div class="year-graduation">
                                     <h4>Graduation year?</h4>
