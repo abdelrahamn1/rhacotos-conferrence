@@ -68,31 +68,33 @@
                             <img src="/assests/user.png" alt="">
                         </div>
                         <h2>What's your name?</h2>
+                        <h4>الاسم رباعى كما فى بطاقة الهوية</h4>
+                        <h3></h3>
                         <div class="formbold-input-flex">
                             <div>
                                 <label for="firstname" class="formbold-form-label"> First Name </label>
                                 <input type="text" name="firstname" id="firstname" class="formbold-form-input"
-                                    required />
+                                    required onkeypress="return allowArabicLetters(event)" />
                             </div>
                             <div>
                                 <label for="secondname" class="formbold-form-label"> Second Name </label>
                                 <input type="text" name="secondname" id="secondname" class="formbold-form-input"
-                                    required />
+                                    required onkeypress="return allowArabicLetters(event)" />
                             </div>
                             <div>
                                 <label for="middlename" class="formbold-form-label"> Middle Name </label>
                                 <input type="text" name="middlename" id="middlename" class="formbold-form-input"
-                                    required />
+                                    required onkeypress="return allowArabicLetters(event)" />
                             </div>
                             <div>
                                 <label for="lastname" class="formbold-form-label"> Last name </label>
-                                <input type="text" name="lastname" id="lastname" class="formbold-form-input" required />
+                                <input type="text" name="lastname" id="lastname" class="formbold-form-input" required  onkeypress="return allowArabicLetters(event)"/>
                             </div>
                         </div>
                         <div>
                             <label for="arabic-name" class="formbold-form-label"> Arabic Name </label>
                             <input type="text" name="arabic-name" id="arabic-name" class="formbold-form-input"
-                                required />
+                                required onkeypress="return allowArabicLetters(event)"/>
                         </div>
                         <div class="upload-image">
                             <label for="personal-img" class="formbold-form-label">Upload-Image</label>
@@ -640,7 +642,7 @@
                         <div class="formbold-input-flex">
                             <div>
                                 <input type="text" required name="id" id="id" class="formbold-form-input"
-                                    placeholder="National-ID" onkeypress="return isNumberKey(event)"  />
+                                    placeholder="National-ID" onkeypress="return isNumberKey(event)" maxlength="14" minlength="14" />
                             </div>
                             <div>
                                 <input type="text" required name="phone" id="phone" class="formbold-form-input"
@@ -657,26 +659,11 @@
                             </div>
                         </div>
                     </div>
-                    <div class="formbold-form-step-4 ">
+                    <div class="formbold-form-step-4  ">
                         <div class="user-form">
                             <img src="/assests/user.png" alt="">
                         </div>
                         <h2>Academic Qualifiction!</h2>
-                        <div class="formbold-input-flex"> 
-                            <div class="work">
-                                <h4>Are currently working?</h4>                      
-                                <div class="Radio-work">
-                                    <input type="radio" required name="work-answer" id="yes-qual-work"  />
-                                    <label for="yes-qual-work">Yes</label>
-                                    <input type="radio" required name="work-answer" id="no-qual-work" />
-                                    <label for="no-qual-work">No</label>
-                                </div>
-                            </div>
-                            <div class="company-name">
-                                <h4 for="work-palce">Company Name?</h4>
-                            <input type="text" required name="work-place" id="work-place" class="formbold-form-input"   />
-                            </div>
-                        </div>
                         <div class="formbold-input-flex">
                             <div class="Acadmic">
                                 <h4>Highest Acadimic Qualifiction ?</h4>
@@ -716,14 +703,35 @@
                                     <input type="text" required name="University" id="University" class="formbold-form-input"  />
                             </div>
                         </div>
+                        <div class="formbold-input-flex">
                             <div class="faculty">
-                                <h4>At which faculty/institute are you currently studying?</h4>
+                                <h4>At which faculty/institute you currently studying?</h4>
                                 <input type="text" required name="faculty" id="faculty" class="formbold-form-input"  />
                             </div>
                             <div class="year-graduation">
                                     <h4>Graduation year?</h4>
                                     <input type="text" required name="graduation" id="graduation" class="formbold-form-input"
                                         onkeypress="return isNumberKey(event)"  />
+                            </div>
+                        </div>
+                                <div class="work">
+                                    <h4>Are currently working?</h4>                      
+                                    <div class="Radio-work">
+                                        <input type="radio" required name="work-answer" id="yes-qual-work"  />
+                                        <label for="yes-qual-work">Yes</label>
+                                        <input type="radio" required name="work-answer" id="no-qual-work" />
+                                        <label for="no-qual-work">No</label>
+                                    </div>
+                                </div>
+                            <div class="formbold-input-flex"> 
+                                <div class="company-name">
+                                    <h4 for="work-palce">Company Name?</h4>
+                                <input type="text" required name="work-place" id="work-place" class="formbold-form-input"   />
+                                </div>
+                                <div class="job-title">
+                                    <h4 for="work-palce">Job title?</h4>
+                                <input type="text" required name="wor-title" id="work-title" class="formbold-form-input"   />
+                                </div>
                             </div>
                     </div>
                     <div class="formbold-form-step-5">
