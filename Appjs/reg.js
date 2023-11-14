@@ -42,18 +42,18 @@ function isNumberKey(event) {
   return true;
 }
 // ----------------------------INPUT FILED ACCEPT ONLY ARABIC LETTERS-----------------------//
-function allowArabicLetters(event) {
+function restrictToArabicLetters(event) {
   var charCode = event.charCode || event.keyCode;
   var charStr = String.fromCharCode(charCode);
-  var arabicRegex = /[\u0600-\u06FF]/; // Arabic Unicode range only
-
+  var arabicRegex = /^[\u0600-\u06FF\s]*$/; // Arabic Unicode range with space (\s) allowed
   if (!arabicRegex.test(charStr)) {
     OpenModalArabic();
     return false; // Prevents typing non-Arabic characters
   } else {
-    return true;
+    return true; // Allows typing Arabic characters
   }
 }
+
 // -----------------------------Form--------------------------------------------------------//
 formSubmitBtn.addEventListener("click", function (event) {
   event.preventDefault();
