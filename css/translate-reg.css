@@ -323,7 +323,8 @@ select:focus {
   margin-left: 5px;
 }
 
-.modal {
+.modal,
+.modal-arabic {
   display: none;
   position: fixed;
   top: 20%;
