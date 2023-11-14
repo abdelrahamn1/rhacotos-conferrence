@@ -18,6 +18,8 @@ const selectinput = document.querySelectorAll("select");
 // Modal
 let Modal = document.getElementById("myModal");
 let CloseModal = document.getElementById("closeModal");
+let CloseModalArabic = document.getElementById("closeModal-arabic");
+let ModalArabic = document.getElementById("myModal-arabic");
 // ckeck Radio , inputs step 4 fileds
 const YesAnswer = document.querySelector("#yes-qual");
 const NoAnswer = document.querySelector("#no-qual");
@@ -46,7 +48,7 @@ function allowArabicLetters(event) {
   var arabicRegex = /[\u0600-\u06FF]/; // Arabic Unicode range only
 
   if (!arabicRegex.test(charStr)) {
-    alert("only arabic!");
+    OpenModalArabic();
     return false; // Prevents typing non-Arabic characters
   } else {
     return true;
@@ -237,3 +239,10 @@ CloseModal.addEventListener("click", function () {
   Modal.style.display = "none";
 });
 // -------------------------------------------------------------------------------------//
+function OpenModalArabic() {
+  ModalArabic.style.display = "block";
+}
+CloseModalArabic.addEventListener("click", () => {
+  ModalArabic.style.display = "none";
+});
+console.log(ModalArabic);
