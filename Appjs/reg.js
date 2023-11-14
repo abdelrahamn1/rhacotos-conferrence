@@ -148,21 +148,28 @@ formSubmitBtn.addEventListener("click", function (event) {
         openModal();
       }
     } else if (NoAnswer.checked) {
-      if (
-        input[12].value.trim() !== "" &&
-        input[13].value.trim() !== "" &&
-        input[14].value.trim() !== "" &&
-        input[15].value.trim() !== "" &&
-        input[16].value.trim() !== "" &&
-        selectinput[2].value != 0
-      ) {
-        stepMenuFour.classList.remove("active");
-        stepMenuFive.classList.add("active");
-        stepFour.classList.remove("active");
-        stepFive.classList.add("active");
-        formSubmitBtn.textContent = "Submit";
-        //back to stage 4
-        formBackBtn.classList.add("active");
+      if (input[12].value.trim() !== "" && selectinput[2].value != 0) {
+        if (Company.style.display === "block") {
+          if (input[17].value.trim() !== "" && input[18].value.trim() !== "") {
+            stepMenuFour.classList.remove("active");
+            stepMenuFive.classList.add("active");
+            stepFour.classList.remove("active");
+            stepFive.classList.add("active");
+            formSubmitBtn.textContent = "Submit";
+            //back to stage 4
+            formBackBtn.classList.add("active");
+          } else {
+            openModal();
+          }
+        } else if (Company.style.display === "none") {
+          stepMenuFour.classList.remove("active");
+          stepMenuFive.classList.add("active");
+          stepFour.classList.remove("active");
+          stepFive.classList.add("active");
+          formSubmitBtn.textContent = "Submit";
+          //back to stage 4
+          formBackBtn.classList.add("active");
+        }
       } else {
         openModal();
       }
@@ -215,11 +222,10 @@ YesAnswer.onclick = function () {
   GraduationYear.style.display = "none";
 };
 NoAnswer.onclick = function () {
-  H4faculty.innerHTML = "Currently Studying?";
-  faculty.style.display = "block";
-  university.style.display = "block";
-  YearStudy.style.display = "block";
-  GraduationYear.style.display = "block";
+  faculty.style.display = "none";
+  university.style.display = "none";
+  YearStudy.style.display = "none";
+  GraduationYear.style.display = "none";
 };
 yesAnswerWork.onclick = function () {
   Company.style.display = "block";
@@ -245,4 +251,3 @@ function OpenModalArabic() {
 CloseModalArabic.addEventListener("click", () => {
   ModalArabic.style.display = "none";
 });
-console.log(ModalArabic);
