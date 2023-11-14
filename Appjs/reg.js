@@ -24,6 +24,7 @@ const NoAnswer = document.querySelector("#no-qual");
 const NoAnswerWork = document.querySelector("#no-qual-work");
 const yesAnswerWork = document.querySelector("#yes-qual-work");
 const Company = document.querySelector(".company-name");
+const jobTitle = document.querySelector(".job-title");
 const Acadmic = document.querySelector(".Acadmic");
 const faculty = document.querySelector(".faculty");
 const GraduationYear = document.querySelector(".year-graduation");
@@ -38,7 +39,20 @@ function isNumberKey(event) {
   if (charCode > 31 && (charCode < 48 || charCode > 57)) return false;
   return true;
 }
-// -----------------------------Form-------------------------------------//
+// ----------------------------INPUT FILED ACCEPT ONLY ARABIC LETTERS-----------------------//
+function allowArabicLetters(event) {
+  var charCode = event.charCode || event.keyCode;
+  var charStr = String.fromCharCode(charCode);
+  var arabicRegex = /[\u0600-\u06FF]/; // Arabic Unicode range only
+
+  if (!arabicRegex.test(charStr)) {
+    alert("only arabic!");
+    return false; // Prevents typing non-Arabic characters
+  } else {
+    return true;
+  }
+}
+// -----------------------------Form--------------------------------------------------------//
 formSubmitBtn.addEventListener("click", function (event) {
   event.preventDefault();
   if (stepMenuOne.className == "formbold-step-menu1 active") {
@@ -83,6 +97,7 @@ formSubmitBtn.addEventListener("click", function (event) {
     event.preventDefault();
     if (
       input[8].value.trim() !== "" &&
+      input[8].value.length === 14 &&
       input[9].value.trim() !== "" &&
       input[10].value.trim() !== "" &&
       input[11].value.trim() !== ""
@@ -100,14 +115,14 @@ formSubmitBtn.addEventListener("click", function (event) {
   } else if (stepMenuFour.className == "formbold-step-menu4 active") {
     if (YesAnswer.checked) {
       if (
+        input[12].value.trim() !== "" &&
         input[13].value.trim() !== "" &&
         input[14].value.trim() !== "" &&
         input[15].value.trim() !== "" &&
-        input[16].value.trim() !== "" &&
         selectinput[2].value != 0
       ) {
         if (Company.style.display === "block") {
-          if (input[12].value.trim() !== "") {
+          if (input[17].value.trim() !== "" && input[18].value.trim() !== "") {
             stepMenuFour.classList.remove("active");
             stepMenuFive.classList.add("active");
             stepFour.classList.remove("active");
@@ -132,11 +147,11 @@ formSubmitBtn.addEventListener("click", function (event) {
       }
     } else if (NoAnswer.checked) {
       if (
+        input[12].value.trim() !== "" &&
         input[13].value.trim() !== "" &&
         input[14].value.trim() !== "" &&
         input[15].value.trim() !== "" &&
         input[16].value.trim() !== "" &&
-        input[17].value.trim() !== "" &&
         selectinput[2].value != 0
       ) {
         stepMenuFour.classList.remove("active");
@@ -151,7 +166,7 @@ formSubmitBtn.addEventListener("click", function (event) {
       }
     }
   } else if (stepMenuFive.className == "formbold-step-menu5 active") {
-    if (input[17].value.trim() !== "") {
+    if (input[19].value.trim() !== "") {
       document.querySelector("form").submit();
     } else {
       openModal();
@@ -198,7 +213,7 @@ YesAnswer.onclick = function () {
   GraduationYear.style.display = "none";
 };
 NoAnswer.onclick = function () {
-  H4faculty.innerHTML = "At which faculty/institute are you studied";
+  H4faculty.innerHTML = "Currently Studying?";
   faculty.style.display = "block";
   university.style.display = "block";
   YearStudy.style.display = "block";
@@ -206,9 +221,11 @@ NoAnswer.onclick = function () {
 };
 yesAnswerWork.onclick = function () {
   Company.style.display = "block";
+  jobTitle.style.display = "block";
 };
 NoAnswerWork.onclick = function () {
   Company.style.display = "none";
+  jobTitle.style.display = "none";
 };
 // ---------------------------------------Modal---------------------------------------//
 
@@ -219,3 +236,4 @@ function openModal() {
 CloseModal.addEventListener("click", function () {
   Modal.style.display = "none";
 });
+// -------------------------------------------------------------------------------------//
