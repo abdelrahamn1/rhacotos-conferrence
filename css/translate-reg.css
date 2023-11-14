@@ -149,9 +149,6 @@ body::after {
 .formbold-form-step-4.active {
   padding-bottom: 20px;
 }
-.company-name {
-  display: none;
-}
 .formbold-form-step-5.active {
   padding-bottom: 80px;
 }
@@ -260,7 +257,6 @@ select:focus {
   top: 89%;
   left: 20%;
   font-size: 20px;
-  /* padding-bottom: 20px; */
 }
 .formbold-form-btn-wrapper .formbold-btn:hover {
   background-color: var(--second-color);
@@ -275,8 +271,16 @@ select:focus {
 .user-form img {
   width: 100px;
 }
+.formbold-form-step-1.active {
+  height: 420px;
+}
 .formbold-form-step-1 .formbold-input-flex .formbold-form-input {
   width: 120%;
+}
+.formbold-form-step-1 h4 {
+  text-align: right;
+  padding-bottom: 20px;
+  font-weight: 400;
 }
 .formbold-form-step-1 .upload-image {
   margin-top: 40px;
@@ -310,7 +314,9 @@ select:focus {
 .formbold-form-step-4 .faculty,
 .university,
 .year-graduation,
-.year-study {
+.year-study,
+.company-name,
+.job-title {
   display: none;
 }
 .Radio input {
