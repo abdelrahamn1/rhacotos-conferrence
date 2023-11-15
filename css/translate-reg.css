@@ -370,11 +370,8 @@ select:focus {
   body {
     overflow-x: hidden;
   }
-
-  .formbold-form-step-1 h2 {
-    padding-top: 20px;
-    margin-bottom: 15px;
-    font-size: 14px;
+  body::after {
+    display: none;
   }
   .user-form {
     display: none;
@@ -382,31 +379,38 @@ select:focus {
   .formbold-steps {
     display: none;
   }
-  .formbold-steps ul {
-    width: 50%;
+  .formbold-form-step-1 h2 {
+    padding-top: -30px;
+    margin-bottom: 50px;
+    font-size: 14px;
+  }
+  .formbold-form-step-1.active {
+    transform: translateY(-180px);
+  }
+  .formbold-form-step-1.active .formbold-input-flex {
     display: flex;
     flex-direction: column;
-    display: none;
+    padding-left: -20px;
+    padding-right: 20px;
   }
-
-  .formbold-form-step-1,
-  .formbold-form-step-2,
-  .formbold-form-step-3,
-  .formbold-form-step-4,
-  .formbold-form-step-5 {
-    padding-bottom: 20px;
-    height: 100%;
+  .formbold-form-step-1.active .formbold-form-input {
+    padding: 0;
+    margin: 0;
+    width: 200px;
+    text-indent: 15px;
   }
-  .formbold-input-flex {
-    display: flex;
-    flex-direction: column;
-    padding-left: 100px;
+  .formbold-form-step-1.active label {
+    transform: translateX(20px);
   }
-  .formbold-form-step-1 .formbold-form-input {
-    transform: translateX(-80px);
+  .formbold-form-step-1.active #arabic-name {
+    margin-left: 5px;
+  }
+  .formbold-form-step-1.active #ar-label {
+    transform: translateX(30px);
+    font-weight: 500;
   }
   .formbold-form-step-1 .upload-image {
-    padding-left: 100px;
+    padding-left: -20px;
     padding-right: 50px;
     padding-bottom: 15px;
   }
@@ -414,7 +418,7 @@ select:focus {
     width: 80%;
   }
   .formbold-form-step-1 .Radio {
-    padding-left: 110px;
+    padding-left: 50px;
   }
   .formbold-form-btn-wrapper {
     position: absolute;
@@ -429,6 +433,7 @@ select:focus {
     margin: 0;
     width: 140px;
     height: 40px;
+    transform: translate(10px, 140px);
   }
   .formbold-main-wrapper {
     width: 100%;
@@ -440,8 +445,8 @@ select:focus {
     padding: 0;
     margin: 0;
   }
-  .formbold-form-step-2 h2 {
-    padding-top: 40px;
+  .formbold-form-step-2.active h2 {
+    margin-top: -80px;
   }
   .formbold-form-step-2 select {
     width: 80%;
@@ -450,10 +455,14 @@ select:focus {
   .formbold-form-step-2 .formbold-form-label {
     padding-left: 20px;
   }
-  .formbold-form-step-2 .formbold-input-flex .formbold-form-input,
+  .formbold-form-step-2.active .formbold-input-flex {
+    display: flex;
+    flex-direction: column;
+  }
+  .formbold-form-input,
   .formbold-input-flex .formbold-form-label {
-    transform: translateX(-80px);
-    width: max-content;
+    transform: translateX(20px);
+    text-indent: 15px;
   }
   .formbold-form-input {
     padding: 0;
@@ -462,69 +471,101 @@ select:focus {
     height: 40px;
   }
   .formbold-form-btn-wrapper .formbold-back-btn {
-    transform: translate(-140px, 70px);
+    transform: translate(-130px, 70px);
     padding: 0;
     margin: 0;
     width: 140px;
     height: 40px;
-    border-radius: 10px;
+    border-radius: 5px;
+    background-color: var(--main-color);
+    color: var(--white);
   }
   .formbold-form-step-3 h2 {
-    padding-top: 55px;
+    margin-top: -300 px;
   }
-  .formbold-form-step-3 .formbold-form-input {
-    transform: translateX(-80px);
+  .formbold-form-step-3.active .formbold-input-flex {
+    display: flex;
+    flex-direction: column;
   }
   .formbold-form-step-4 h2 {
-    padding-top: 70px;
+    margin-top: -200px;
+    font-size: 20px;
+  }
+  .formbold-form-step-4.active .formbold-input-flex {
+    display: flex;
+    flex-direction: column;
+  }
+  .formbold-form-step-4.active .formbold-input-flex h4 {
+    font-size: 13px;
+    margin-left: 5px;
+    margin-bottom: 20px;
+  }
+  .formbold-form-step-4.active .formbold-form-input {
+    width: 140px;
+  }
+  .formbold-form-step-4.active .formbold-form-input::placeholder {
+    font-size: 11px;
+    display: none;
   }
   .formbold-form-step-4 select {
     transform: translateX(10px);
   }
+  .formbold-form-step-4.active .work .Radio-work,
+  .Radio {
+    margin-left: 10px;
+    margin-top: 15px;
+  }
+  .formbold-form-step-5.active input {
+    margin-left: 18px;
+  }
 }
 /* ------------------------------------------ */
-/* 791px */
+/* 791 */
 /* ------------------------------------------ */
 @media (min-width: 421px) and (max-width: 791px) {
   body {
     overflow-x: hidden;
   }
-  /* body::after {
-    background: white;
-  } */
-
-  .formbold-form-step-1 h2 {
-    padding-top: 20px;
-    margin-bottom: 15px;
+  body::after {
+    display: none;
+  }
+  .user-form {
+    display: none;
   }
   .formbold-steps {
     display: none;
   }
-  .formbold-steps ul {
-    width: 50%;
+  .formbold-form-step-1 h2 {
+    padding-top: -30px;
+    margin-bottom: 50px;
+    font-size: 22px;
+  }
+  .formbold-form-step-1.active {
+    transform: translateY(-180px);
+  }
+  .formbold-form-step-1.active .formbold-input-flex {
     display: flex;
     flex-direction: column;
-    display: none;
+    transform: translateX(5%);
   }
-
-  .formbold-form-step-1,
-  .formbold-form-step-2,
-  .formbold-form-step-3,
-  .formbold-form-step-4,
-  .formbold-form-step-5 {
-    padding-bottom: 20px;
-    height: 100%;
+  .formbold-form-step-1.active .formbold-form-input {
+    padding: 0;
+    margin: 0;
+    width: 400px;
+    text-indent: 15px;
   }
-  .formbold-input-flex {
-    display: flex;
-    flex-direction: column;
-    padding-left: 100px;
+  .formbold-form-step-1.active label {
+    transform: translateX(20px);
   }
-  .formbold-form-step-1 .formbold-form-input {
-    transform: translateX(-80px);
+  .formbold-form-step-1.active #arabic-name {
+    margin-left: 20px;
+  }
+  .formbold-form-step-1.active #ar-label {
+    transform: translateX(50px);
+    font-weight: 500;
   }
   .formbold-form-step-1 .upload-image {
-    padding-left: 100px;
+    padding-left: -20px;
     padding-right: 50px;
     padding-bottom: 15px;
   }
@@ -532,13 +573,13 @@ select:focus {
     width: 80%;
   }
   .formbold-form-step-1 .Radio {
-    padding-left: 110px;
+    padding-left: 50px;
   }
   .formbold-form-btn-wrapper {
     position: absolute;
     top: 102%;
-    left: 70%;
-    transform: translate(-100%, -80%);
+    left: 60%;
+    transform: translate(-100%, 80%);
     padding: 0;
     margin: 0;
   }
@@ -547,6 +588,7 @@ select:focus {
     margin: 0;
     width: 140px;
     height: 40px;
+    transform: translate(10px, 140px);
   }
   .formbold-main-wrapper {
     width: 100%;
@@ -558,8 +600,8 @@ select:focus {
     padding: 0;
     margin: 0;
   }
-  .formbold-form-step-2 h2 {
-    padding-top: 40px;
+  .formbold-form-step-2.active h2 {
+    margin-top: -80px;
   }
   .formbold-form-step-2 select {
     width: 80%;
@@ -568,38 +610,70 @@ select:focus {
   .formbold-form-step-2 .formbold-form-label {
     padding-left: 20px;
   }
-  .formbold-form-step-2 .formbold-input-flex .formbold-form-input,
+  .formbold-form-step-2.active .formbold-input-flex {
+    display: flex;
+    flex-direction: column;
+  }
+  .formbold-form-input,
   .formbold-input-flex .formbold-form-label {
-    transform: translateX(-80px);
-    width: max-content;
+    transform: translateX(20px);
+    text-indent: 15px;
   }
   .formbold-form-input {
     padding: 0;
     margin: 0;
-    width: max-content;
+    width: 400px;
     height: 40px;
   }
   .formbold-form-btn-wrapper .formbold-back-btn {
-    transform: translate(-140px, 70px);
+    transform: translate(-130px, 70px);
     padding: 0;
     margin: 0;
     width: 140px;
     height: 40px;
-    border-radius: 10px;
+    border-radius: 5px;
+    background-color: var(--main-color);
+    color: var(--white);
   }
   .formbold-form-step-3 h2 {
-    padding-top: 55px;
+    margin-top: -300 px;
   }
-  .formbold-form-step-3 .formbold-form-input {
-    transform: translateX(-80px);
+  .formbold-form-step-3.active .formbold-input-flex {
+    display: flex;
+    flex-direction: column;
   }
   .formbold-form-step-4 h2 {
-    padding-top: 70px;
+    margin-top: -200px;
+    font-size: 20px;
   }
-  .formbold-form-step-4 select {
+  .formbold-form-step-4.active .formbold-input-flex {
+    display: flex;
+    flex-direction: column;
+  }
+  .formbold-form-step-4.active .formbold-input-flex h4 {
+    font-size: 13px;
+    margin-left: 5px;
+    margin-bottom: 20px;
+  }
+  .formbold-form-step-4.active .formbold-form-input {
+    width: 400px;
+  }
+  .formbold-form-step-4.active .formbold-form-input::placeholder {
+    font-size: 11px;
+    display: none;
+  }
+  .formbold-form-step-4.active select {
     transform: translateX(10px);
   }
-  .formbold-form-step-4 .formbold-form-input {
+  .formbold-form-step-4.active .work .Radio-work,
+  .Radio {
     margin-left: 10px;
+    margin-top: 15px;
+  }
+  .formbold-form-step-4.active {
+    padding-top: 400px;
+  }
+  .formbold-form-step-5.active input {
+    margin-left: 30px;
   }
 }
