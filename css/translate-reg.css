@@ -366,7 +366,7 @@ select:focus {
 /* ---------------------------------- */
 /* Responsive */
 /* ---------------------------------- */
-@media (min-width: 150px) and (max-width: 420px) {
+@media (min-width: 52px) and (max-width: 270px) {
   body {
     overflow-x: hidden;
   }
@@ -385,13 +385,12 @@ select:focus {
     font-size: 14px;
   }
   .formbold-form-step-1.active {
-    transform: translateY(-180px);
+    transform: translate(-15px, -180px);
   }
   .formbold-form-step-1.active .formbold-input-flex {
     display: flex;
     flex-direction: column;
-    padding-left: -20px;
-    padding-right: 20px;
+    padding-left: 5px;
   }
   .formbold-form-step-1.active .formbold-form-input {
     padding: 0;
@@ -400,7 +399,8 @@ select:focus {
     text-indent: 15px;
   }
   .formbold-form-step-1.active label {
-    transform: translateX(20px);
+    transform: translateX(5px);
+    font-size: 13px;
   }
   .formbold-form-step-1.active #arabic-name {
     margin-left: 5px;
@@ -410,7 +410,168 @@ select:focus {
     font-weight: 500;
   }
   .formbold-form-step-1 .upload-image {
-    padding-left: -20px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 15px;
+  }
+  .formbold-form-step-1 .upload-image label {
+    transform: translateX(20px);
+    /* display: none; */
+  }
+  .formbold-form-step-1 .upload-image input {
+    width: 40%;
+  }
+  .formbold-form-step-1 .Radio {
+    padding-left: 50px;
+  }
+  .formbold-form-btn-wrapper {
+    position: absolute;
+    top: 119%;
+    left: 70%;
+    transform: translate(15px, 10px);
+    padding: 0;
+    margin: 0;
+  }
+  .formbold-form-btn-wrapper .formbold-btn {
+    padding: 0;
+    margin: 0;
+    width: 140px;
+    height: 40px;
+    transform: translate(10px, 140px);
+  }
+  .formbold-main-wrapper {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  .formbold-main-wrapper .formbold-form-wrapper {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  .formbold-form-step-2.active h2 {
+    margin-top: -80px;
+  }
+  .formbold-form-step-2 select {
+    width: 80%;
+    transform: translateX(20px);
+  }
+  .formbold-form-step-2 .formbold-form-label {
+    padding-left: 20px;
+  }
+  .formbold-form-step-2.active .formbold-input-flex {
+    display: flex;
+    flex-direction: column;
+  }
+  .formbold-form-input,
+  .formbold-input-flex .formbold-form-label {
+    transform: translateX(20px);
+    text-indent: 15px;
+  }
+  .formbold-form-input {
+    padding: 0;
+    margin: 0;
+    width: 180px;
+    height: 40px;
+  }
+  .formbold-form-btn-wrapper .formbold-back-btn {
+    transform: translate(-130px, 70px);
+    padding: 0;
+    margin: 0;
+    width: 140px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: var(--main-color);
+    color: var(--white);
+  }
+  .formbold-form-step-3 h2 {
+    margin-top: -300 px;
+  }
+  .formbold-form-step-3.active .formbold-input-flex {
+    display: flex;
+    flex-direction: column;
+  }
+  .formbold-form-step-4 h2 {
+    margin-top: -200px;
+    font-size: 20px;
+  }
+  .formbold-form-step-4.active .formbold-input-flex {
+    display: flex;
+    flex-direction: column;
+  }
+  .formbold-form-step-4.active .formbold-input-flex h4 {
+    font-size: 13px;
+    margin-left: 5px;
+    margin-bottom: 20px;
+  }
+  .formbold-form-step-4.active .formbold-form-input {
+    width: 140px;
+  }
+  .formbold-form-step-4.active .formbold-form-input::placeholder {
+    font-size: 11px;
+    display: none;
+  }
+  .formbold-form-step-4 select {
+    width: 100px;
+  }
+  .formbold-form-step-4.active .work .Radio-work,
+  .Radio {
+    margin-left: 10px;
+    margin-top: 15px;
+  }
+  .formbold-form-step-5.active input {
+    margin-left: 5px;
+  }
+}
+
+/* ---------------------------------- */
+/* 420px */
+/* ---------------------------------- */
+@media (min-width: 271px) and (max-width: 420px) {
+  body {
+    overflow-x: hidden;
+  }
+  body::after {
+    display: none;
+  }
+  .user-form {
+    display: none;
+  }
+  .formbold-steps {
+    display: none;
+  }
+  .formbold-form-step-1 h2 {
+    padding-top: -30px;
+    margin-bottom: 50px;
+    font-size: 14px;
+  }
+  .formbold-form-step-1.active {
+    transform: translate(-15px, -180px);
+  }
+  .formbold-form-step-1.active .formbold-input-flex {
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+  }
+  .formbold-form-step-1.active .formbold-form-input {
+    padding: 0;
+    margin: 0;
+    width: 200px;
+    text-indent: 15px;
+  }
+  .formbold-form-step-1.active label {
+    transform: translateX(20px);
+    font-size: 13px;
+  }
+  .formbold-form-step-1.active #arabic-name {
+    margin-left: 17px;
+  }
+  .formbold-form-step-1.active #ar-label {
+    transform: translateX(30px);
+    font-weight: 500;
+  }
+  .formbold-form-step-1 .upload-image {
+    padding-left: 20px;
     padding-right: 50px;
     padding-bottom: 15px;
   }
@@ -422,9 +583,9 @@ select:focus {
   }
   .formbold-form-btn-wrapper {
     position: absolute;
-    top: 102%;
+    top: 119%;
     left: 70%;
-    transform: translate(-100%, -80%);
+    transform: translate(-20px, 10px);
     padding: 0;
     margin: 0;
   }
